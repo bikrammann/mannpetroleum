@@ -18,10 +18,11 @@ def atmReport():
             for row in r2:
                 atmValues = [row["DATE"], row["ATM Remaining Amount"], '', row["ATM Amount Dispense"], '',
                              row["Number of Withdrawal"], row["ATM FEE'S"]]
-            atmDict = {atmHeaders[i]: atmValues[i] for i in range(len(atmHeaders))}
-
-            with open('csvFiles/atm.csv', 'a', newline='') as f1:
-                r3 = csv.DictWriter(f1, fieldnames=atmHeaders)
-                r3.writerow(atmDict)
     except FileNotFoundError as e:
         print(e)
+
+    atmDict = {atmHeaders[i]: atmValues[i] for i in range(len(atmHeaders))}
+
+    with open('csvFiles/atm.csv', 'a', newline='') as f1:
+        r3 = csv.DictWriter(f1, fieldnames=atmHeaders)
+        r3.writerow(atmDict)
