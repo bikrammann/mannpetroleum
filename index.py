@@ -32,7 +32,7 @@ while True:
         date = data[0]
         nReg = float(data[6]) + (0.60 * float(data[7]))
         vPower = float(data[8]) + (0.40 * float(data[7]))
-        nonTax = float(data[-5]) - float(data[-6]) - float(data[-2]) - float(data[-1])
+        nonTax = round(float(data[-5]) - float(data[-6]) - float(data[-2]) - float(data[-1]),2)
         taxable = data[-2]
         lottery = data[-1]
     except ValueError:
