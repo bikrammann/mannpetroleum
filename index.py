@@ -81,5 +81,5 @@ while True:
     print("---------------------------")
     print()
 
-    v = input('Enter "DONE" to Quit! \n')
+    v = input('Type "DONE" to Quit or Press "ENTER" to continue to next Date \n')
     check_input(v)
